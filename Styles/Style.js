@@ -10,8 +10,16 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
   },
+  welcome: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  welcomeText: {
+    flex: 1,
+    flexGrow: 1,
+    justifyContent: 'center',
+  },
   header: {
-    backgroundColor: '#efefef',
     textAlign: 'center',
     fontSize: 30,
     padding: config.appPadding,
@@ -33,7 +41,9 @@ const styles = StyleSheet.create({
   },
   buttonStyle: {
     fontSize: 20,
-    padding: config.appPadding,
+  },
+  footerButton: {
+    alignSelf: 'flex-end',
   },
   nameListElement: {
     fontSize: config.appFontSize,
