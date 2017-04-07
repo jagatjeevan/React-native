@@ -24,8 +24,8 @@ export default class Main extends Component {
         </View>
         <Button
           style={styles.buttonStyle}
-          onPress={() => navigate('ScrollViewSection')}
-          title="ScrollViewSection"
+          onPress={() => navigate('DetailsScreen')}
+          title="Details Screen"
         />
       </View>
     );

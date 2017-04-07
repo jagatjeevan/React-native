@@ -33,7 +33,7 @@ export default class Details extends Component {
       systemName: DeviceInfo.getSystemName(),
       userAgent: DeviceInfo.getUserAgent()
     };
-    getContacts();
+    // getContacts(); This has some error.
   }
   render() {
     const { navigate } = this.props.navigation;

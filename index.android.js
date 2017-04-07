@@ -13,7 +13,7 @@ import {
 
 import MainScreen from './frontend/pages/Main';
 import ScrollViewSection from './frontend/ScrollViewSection';
-import DetailsScreen from './frontend/DetailsScreen';
+import DetailsScreen from './frontend/DetailsScreen.js';
 
 const AwesomeProject = StackNavigator({
   Main: {screen: MainScreen},
