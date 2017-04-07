@@ -15,6 +15,7 @@ export default class Main extends Component {
 
   render() {
     const { navigate } = this.props.navigation;
+    console.log("This should come");
     return (
       <View style={styles.welcome}>
         <View style={styles.welcomeText}>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DeviceInfo from 'react-native-device-info';
-import Contacts from 'react-native-contacts';
 import {
   Text,
   Button,
@@ -10,21 +9,13 @@ import {
 
 import styles from '../Styles/Style';
 
-function getContacts() {
-  let contactsArr = [];
-  Contacts.getAll( (err, contacts) => {
-    contactsArr.push(contacts.phoneNumbers)
-  });
-  console.log('contacts array', contactsArr);
-  return contactsArr;
-}
-
 export default class Details extends Component {
   static navigationOptions = {
     title: 'Detail Screen',
   };
   constructor() {
     super();
+    debugger;
     this.state = {
       uniqueId: DeviceInfo.getUniqueID(),
       manufacturer: DeviceInfo.getManufacturer(),
@@ -33,7 +24,6 @@ export default class Details extends Component {
       systemName: DeviceInfo.getSystemName(),
       userAgent: DeviceInfo.getUserAgent()
     };
-    // getContacts(); This has some error.
   }
   render() {
     const { navigate } = this.props.navigation;
@@ -43,7 +33,6 @@ export default class Details extends Component {
           Detail Section
         </Text>
         <ScrollView>
-          <Text>Contacts</Text>
           <Text style={styles.nameListElement}>Manufacturer : {this.state.manufacturer}</Text>
           <Text style={styles.nameListElement}>Unique ID : {this.state.uniqueId}</Text>
           <Text style={styles.nameListElement}>Brand : {this.state.brand}</Text>
